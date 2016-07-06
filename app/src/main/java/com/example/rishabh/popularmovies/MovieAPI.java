@@ -12,9 +12,9 @@ import retrofit.http.Query;
  */
 public interface MovieAPI {
 
-    @GET("/3/discover/movie")
+    @GET("/3/movie/{sort_by}")
     Call<MovieList> loadMovies(
-            @Query("sort_by") String sortOrder,
+            @Path("sort_by") String sortOrder,
             @Query("api_key") String apiKey
     );
 
