@@ -112,13 +112,13 @@ public class MovieGridFragment extends Fragment implements Callback<MovieList> {
 
 
 
-        String sortByParameter = "popularity.desc";
+        String sortByParameter = "popular";
 
         if (sortByValue == 1) {
 
-            sortByParameter = "popularity.desc";
+            sortByParameter = "popular";
         } else if (sortByValue == 2) {
-            sortByParameter = "vote_count.desc";
+            sortByParameter = "top_rated";
         } else if (savedInstanceState == null && sortByValue == 3) {
 
             // Get the data for the movie from the database
